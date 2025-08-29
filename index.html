@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bruno.zip</title>
+  <style>
+    body {
+      background: #fdfdfd;
+      font-family: "Inter", Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 40px;
+      margin: 0;
+    }
+
+    .window {
+      background: #fff;
+      border: 1px solid #ddd;
+      width: 900px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .title-bar {
+      background: #f0f0f0;
+      padding: 6px 10px;
+      font-size: 13px;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .title-bar span {
+      color: #333;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 220px 1fr 1fr;
+      gap: 16px;
+      padding: 16px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #e6e6e6;
+      border-radius: 6px;
+      padding: 12px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .card h2 {
+      font-size: 12px;
+      margin: 0 0 6px;
+      text-transform: uppercase;
+      color: #666;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 3px;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
+    a {
+      color: #0d6efd;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .highlight {
+      color: #d63384;
+      font-weight: bold;
+    }
+
+    /* Spotify */
+    .spotify-frame iframe {
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+    }
+
+    /* Galeria */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 12px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 6px;
+      object-fit: cover;
+      border: 1px solid #ddd;
+    }
+
+    /* Área retrato + vídeo lado a lado */
+    .side-by-side {
+      display: flex;
+      gap: 20px;
+      width: 900px;
+    }
+
+    .portrait, .video-window {
+      flex: 1;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .portrait img {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+    }
+
+    .video-window video {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Janela principal -->
+  <div class="window">
+    <div class="title-bar">
+      <span>bruno.zip</span>
+      <span>side | whi | cc</span>
+    </div>
+
+    <div class="content">
+      <!-- Foto de perfil -->
+      <div class="profile-pic">
+        <img src="7c9b02516acc8d9b613fb47b47c3a245.jpg" alt="Foto de perfil">
+      </div>
+
+      <!-- Coluna da esquerda -->
+      <div>
+        <div class="card">
+          <h2>About Me</h2>
+          <p><strong>Nome:</strong> Bruno</p>
+          <p><strong>Pronomes:</strong> vencedor</p>
+          <p><strong>Idade:</strong> 23</p>
+          <p><strong>Personalidade:</strong> não tenho</p>
+        </div>
+
+        <div class="card">
+          <h2>Besties</h2>
+          <p>coisa de boiola amigaa</p>
+        </div>
+      </div>
+
+      <!-- Coluna da direita -->
+      <div>
+        <div class="card">
+          <h2>B4YF</h2>
+          <p>Falo bosta às vezes e posso sumir em algum momento mas sou bacana</p>
+        </div>
+
+        <div class="card">
+          <h2>Interesses</h2>
+          <p>☕ café, 🎵 música, 📚 livros (muitos livros), 💻 tech (muito tech), 💸 dinheiro (cadê?)</p>
+        </div>
+
+        <div class="card">
+          <h2>DFI</h2>
+          <p>Se você gostar do estado. 🚫</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Janela Spotify -->
+  <div class="window">
+    <div class="title-bar">
+      <span>SpotifyPlayer.exe</span>
+      <span>🎶</span>
+    </div>
+    <div class="content">
+      <div class="card spotify-frame" style="grid-column: 1 / -1;">
+        <h2>Now Playing</h2>
+        <iframe src="https://open.spotify.com/embed/track/4BNT04XPD3HK3MOCIlvbtP"
+          width="100%" height="152" frameborder="0" allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"></iframe>
+        <br><br>
+        <iframe src="https://open.spotify.com/embed/track/7gE24PL1cHZRvO4NkmmCni"
+          width="100%" height="152" frameborder="0" allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Janela Galeria -->
+  <div class="window">
+    <div class="title-bar">
+      <span>Galeria.exe</span>
+      <span>🖼</span>
+    </div>
+    <div class="content">
+      <div class="card" style="grid-column: 1 / -1;">
+        <h2>Galeria</h2>
+        <div class="gallery">
+          <img src="0693e848ab3c9272bac4ccbe7904c14e.jpg" alt="img1">
+          <img src="eed8555e31b4b97e2e56a3344577d560.jpg" alt="img2">
+          <img src="5835e9bf78844cf5d5fa93a865156029.jpg" alt="img3">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Janela do GIF -->
+  <div class="window">
+    <div class="title-bar">
+      <span>Gif.exe</span>
+      <span>🐱</span>
+    </div>
+    <div class="content">
+      <div class="card" style="grid-column: 1 / -1; text-align:center;">
+        <img src="e0738c823195e27f4a67b1e66c49f646.gif" alt="gif gato">
+      </div>
+    </div>
+  </div>
+
+  <!-- Retrato + Vídeo lado a lado -->
+  <div class="side-by-side">
+    <!-- Retrato especial -->
+    <div class="portrait">
+      <div class="title-bar">
+        <span>Retrato.exe</span>
+        <span>🌿</span>
+      </div>
+      <div class="content">
+        <div class="card" style="grid-column: 1 / -1;">
+          <img src="ee46ab96b50446721cac9f9debeef541.jpg" alt="Retrato especial">
+        </div>
+      </div>
+    </div>
+
+    <!-- Vídeo lateral -->
+    <div class="video-window">
+      <div class="title-bar">
+        <span>Video.exe</span>
+        <span>📹</span>
+      </div>
+      <div class="content">
+        <div class="card" style="grid-column: 1 / -1; text-align:center;">
+          <video controls>
+            <source src="all about lily chou chou still keeps me up at night sometimesedit by @ neocalibangrides (tt).mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
